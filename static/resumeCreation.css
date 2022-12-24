@@ -1,0 +1,72 @@
+{% load staticfiles %}
+img{
+    border-radius:50%;
+}
+* {
+	
+	padding: 0;
+	box-sizing: border-box;
+
+}
+
+body {
+
+	background-image: url("/static/bg.jpg");
+	background:cover;
+
+	background:repeat:no-repeat;
+	backdrop-filter: blur(2px);
+	background-attachment:fixed;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+.full {
+	width: 60%;
+	max-width: 1000px;
+	min-height: 100px;
+	background-color: rgb(245, 239, 231);
+	margin: 0px;
+	display: grid;
+	grid-template-columns: 2fr 4fr;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.left {
+	position: initial;
+	background-color: #78C482;
+    padding: 20px;
+	font-family: garamond;
+
+
+
+}
+.right {
+	position: initial;
+	background-color: white;
+	padding: 20px;
+
+	
+
+}
+ .image,.Contact, .Skills, .Language, .Hobbies,
+.Summary, .Experience, .Education, .project {
+	margin-top: 40px;
+	margin-bottom: 30px;
+	font-family: garamond;
+}
+
+
+.h2 {
+	background-color: rgb(4, 96, 150);
+}
+h1{
+	font-family: lucida handwriting;
+}
+h3{
+	font-family: monaco;
+}
+
+
