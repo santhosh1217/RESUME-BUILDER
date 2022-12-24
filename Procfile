@@ -1,1 +1,1 @@
-web: gunicorn park.wsgi --log-file -
+web: python manage.py collectstatic && gunicorn park.wsgi --log-file -
