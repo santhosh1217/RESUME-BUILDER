@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>form</title>
+
+     <link href="{{STATIC_URL}}static/form1.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+
+
+<div class="container">
+
+    <form action="resume/" enctype="multipart/form-data" method="post">
+         {% csrf_token %}
+
+        
+        <label >NAME * </label><input class="ip" name="user1" placeholder="name" type="text"   required>  <br>
+
+        {%for i in messages%}
+        <div class="error"><label>{{i}}</label></div>
+        {% endfor %}
+
+
+        <label>PASSWORD*:</label><input class="ip" name="password1" placeholder="passsword" type="password" required><br>
+
+        <label>CONFIRM PASSWORD*:</label><input class="ip" name="password2" placeholder="confirm password" type="password" required><br>
+
+        <label>DOMAIN*:</label><input class="ip" name="domain" placeholder="domain" type="text" required><br>
+
+        <label>MOBILE NO*:</label><input class="ip" name="mobile1" placeholder="mobile" type="tel" required><br>
+
+        <label>SELECT YOUR IMAGE(optional):</label><input class="ip" name="image1" type="file"> <br>
+
+        <label>EMAIL*:</label><input class="ip" name="gmail" placeholder="mail_id" type="email" required><br>
+
+        <label>ADDRESS*:</label><input class="ip" name="address1" placeholder="address" type="text" required><br>
+
+        <label>SKILLS(optional):</label><input class="ip" name="skill1" placeholder="separate by spaces" type="text"><br>
+
+        <label>ABOUT YOURSELF(optional):</label><textarea  class="ip" name="about1" placeholder="about me" ></textarea><br>
+
+        <label>YOUR HOBBIES(optional):</label><input class="ip" name="hobby1" placeholder="separate by spaces" type="text"><br>
+
+        <label>COLLEGE NAME*:</label><input class="ip" name="college" placeholder="college" type="text" required><br>
+
+        <label>CGPA*:</label><input class="ip" name="cgpa" placeholder="CGPA" type="text" required><br>
+
+        <label>PASSED OUT YEAR*:</label><input class="ip" name="passout" placeholder="passout" type="date" required><br>
+        
+        <label>PROJECT NAME(optional):</label><input class="ip" name="project" placeholder="project_name" type="text"><div class="project"><br>
+
+        <label>PROJECT DESCRIPTION(optional):</label><textarea id="ip2" name="project_desc" placeholder="project_description" type="text"></textarea></div><br>
+        
+        <label>SUMMARY(optional):</label><textarea class="ip" name="summary" placeholder="Summary" type="text"></textarea><br>
+
+        <label>KNOWN LANGUAGES(optional):</label><input class="ip" name="language" placeholder="separate by spaces" type="text"><br>
+
+        <button id="button">submit</button>
+        
+</div>
+</form>
+</body>
+</html>

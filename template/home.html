@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>log in!</title>
+    <link href="{% static 'logInPage.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+<form action="valid" method="post">
+    {% csrf_token %}
+    <div class="container">
+        <div class="header">
+            Login Form
+        </div>
+
+
+        <lable><b>USER NAME :</b> <input name="user" placeholder="user name" type="text" required>
+        </lable>
+
+            {% for i in messages %}
+
+                <p><li>{{i}}</li></p>
+
+            {% endfor %}
+
+        <B>PASSWORD:</B>
+        <input name="password" placeholder="Your Password" type="password" required>
+
+
+        <button>login</button>
+
+
+        <p><i>Create new one?</i></p>
+
+        <div class="link">
+            <a href="https://park-college.herokuapp.com/signup">
+                sign in
+            </a>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>
