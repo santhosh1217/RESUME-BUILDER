@@ -80,12 +80,8 @@ WSGI_APPLICATION = 'park.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'JRKVpiAJ5j5XaBEMtJc2',
-        'HOST': 'containers-us-west-165.railway.app',
-        'PORT': '8067',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR,'db.sqlite3'),
     }
 }
 
