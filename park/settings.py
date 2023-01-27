@@ -27,8 +27,8 @@ SECRET_KEY = 'django-insecure-%%+y1kzv*wrw#qd4s+cq-eicp=wrp^lz15h#5afwi!us%$n4)%
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-CSRF_TRUSTED_ORIGINS = ['https://park.up.railway.app']
-ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = ['https://resume-gen.vercel.app/']
+ALLOWED_HOSTS = ['.vercel.app','.now.sh']
 
 
 # Application definition
